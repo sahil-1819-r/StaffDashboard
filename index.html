@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartQueue | Staff Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>SmartQueue - Staff Dashboard</h1>
+
+<div>
+    <div>
+
+        <!-- Add Person -->
+        <div>
+            <h2>Add Person</h2>
+            <input type="text" id="nameInput" placeholder="Enter customer name">
+            <button onclick="addPerson()">Generate Token</button>
+        </div>
+
+        <!-- Current Token -->
+        <div class="card current">
+            <h2>Current Token</h2>
+            <p id="currentToken">--</p>
+            <button onclick="callNext()">Call Next</button>
+            <button onclick="holdToken()">Hold</button>
+        </div>
+
+        <!-- Hold List -->
+        <div class="card hold">
+            <h2>Hold List</h2>
+            <button onclick="callFromHold()">Call from Hold</button>
+            <ul id="holdList"></ul>
+        </div>
+
+    </div>
+
+    <div>
+
+        <!-- Analytics -->
+        <div>
+            <h2>Analytics</h2>
+            <p>Total Tokens: <span id="totalCount">0</span></p>
+            <p>Served: <span id="servedCount">0</span></p>
+            <p>Pending: <span id="pendingCount">0</span></p>
+        </div>
+
+        <!-- Live Queue -->
+        <div class="card">
+            <h2>Live Queue</h2>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Token No</th>
+                        <th>Customer Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="queueTableBody"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
