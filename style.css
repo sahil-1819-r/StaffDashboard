@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6fb;
+}
+
+h1 {
+  margin: 0;
+  padding: 16px 20px;
+  background-color: #2f3cff;
+  color: white;
+  font-size: 22px;
+}
+
+body > div {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* LEFT SIDE */
+body > div > div:first-child {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* RIGHT SIDE */
+body > div > div:last-child {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div > div,
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== ADD PERSON ===== */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2f3cff;
+  color: white;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== CURRENT TOKEN CARD ===== */
+.current p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* ===== HOLD LIST ===== */
+.hold {
+  background-color: #fff7e6;
+}
+
+#holdList {
+  list-style: none;
+  padding: 0;
+}
+
+#holdList li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== ANALYTICS ===== */
+
+body > div > div:last-child > div:first-child {
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+body > div > div:last-child > div:first-child h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+body > div > div:last-child > div:first-child p {
+  background-color: white;
+  border-radius: 14px;
+  padding: 18px 20px;
+  width: 30%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body > div > div:last-child > div:first-child span {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+body > div > div:last-child > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+body > div > div:last-child > div:first-child p:nth-of-type(1) {
+  border-left: 6px solid #6c7cff; /* Total */
+}
+
+body > div > div:last-child > div:first-child p:nth-of-type(2) {
+  border-left: 6px solid #2ecc71; /* Served */
+}
+
+body > div > div:last-child > div:first-child p:nth-of-type(3) {
+  border-left: 6px solid #f39c12; /* Pending */
+}
+
+/* ===== LIVE QUEUE TABLE ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th {
+  background-color: #f0f2ff;
+  padding: 10px;
+}
+
+table td {
+  padding: 8px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
